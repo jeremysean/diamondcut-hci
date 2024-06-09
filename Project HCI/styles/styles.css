@@ -1,0 +1,341 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+:root{
+    --yellow-1: #13110b;
+    --yellow-2: #1a1810;
+    --yellow-3: #2a2308;
+    --yellow-4: #372b00;
+    --yellow-5: #433600;
+    --yellow-6: #50430a;
+    --yellow-7: #63551d;
+    --yellow-8: #7e6d27;
+    --yellow-9: #ffd700;
+    --yellow-10: #f1ce36;
+    --yellow-11: #fad844;
+    --yellow-12: #f9ebb6;
+  
+    --yellow-a1: #bb110003;
+    --yellow-a2: #f7c4000a; 
+    --yellow-a3: #febb001b;
+    --yellow-a4: #feb30029;
+    --yellow-a5: #fec00036;
+    --yellow-a6: #fecd0044;
+    --yellow-a7: #ffd73458;
+    --yellow-a8: #ffda4175;
+    --yellow-a9: #ffd700;
+    --yellow-a10: #ffda38f0;
+    --yellow-a11: #ffdc45fa;
+    --yellow-a12: #fff1baf9;
+  
+    --yellow-contrast: #282109;
+    --yellow-surface: #231f1080;
+    --yellow-indicator: #ffd700;
+    --yellow-track: #ffd700;
+
+    --gray-1: #111113;
+    --gray-2: #19191b;
+    --gray-3: #222325;
+    --gray-4: #292a2e;
+    --gray-5: #303136;
+    --gray-6: #393a40;
+    --gray-7: #46484f;
+    --gray-8: #5f606a;
+    --gray-9: #6c6e79;
+    --gray-10: #797b86;
+    --gray-11: #b2b3bd;
+    --gray-12: #eeeef0;
+  
+    --gray-a1: #1111bb03;
+    --gray-a2: #cbcbf90b;
+    --gray-a3: #d6e2f916;
+    --gray-a4: #d1d9f920;
+    --gray-a5: #d7ddfd28;
+    --gray-a6: #d9defc33;
+    --gray-a7: #dae2fd43;
+    --gray-a8: #e0e3fd60;
+    --gray-a9: #e0e4fd70;
+    --gray-a10: #e3e7fd7e;
+    --gray-a11: #eff0feb9;
+    --gray-a12: #fdfdffef;
+  
+    --gray-contrast: #FFFFFF;
+    --gray-surface: rgba(0, 0, 0, 0.05);
+    --gray-indicator: #6c6e79;
+    --gray-track: #6c6e79;
+
+    --color-success: #34C759;
+    --color-warning: #FFCC00;
+    --color-danger: #FF3B30;
+    --color-danger-variant: #FF453A;    
+
+    --container-width-lg: 76%;
+    --container-width-md: 90%;
+    --container-width-sm: 94%;
+
+
+    --transition: all 400ms ease;
+}
+  
+@supports (color: color(display-p3 1 1 1)) {
+    @media (color-gamut: p3) {
+        :root{
+        --yellow-1: oklch(17.8% 0.012 95.33);
+        --yellow-2: oklch(20.9% 0.017 95.33);
+        --yellow-3: oklch(25.8% 0.043 95.33);
+        --yellow-4: oklch(29.4% 0.066 95.33);
+        --yellow-5: oklch(33.5% 0.075 95.33);
+        --yellow-6: oklch(38.6% 0.073 95.33);
+        --yellow-7: oklch(45.2% 0.077 95.33);
+        --yellow-8: oklch(53.5% 0.09 95.33);
+        --yellow-9: oklch(88.7% 0.182 95.33);
+        --yellow-10: oklch(85.6% 0.162 95.33);
+        --yellow-11: oklch(88.6% 0.162 95.33);
+        --yellow-12: oklch(93.8% 0.069 95.33);
+
+        --yellow-a1: color(display-p3 0.941 0.067 0 / 0.009);
+        --yellow-a2: color(display-p3 0.996 0.792 0.071 / 0.038);
+        --yellow-a3: color(display-p3 1 0.769 0 / 0.101);
+        --yellow-a4: color(display-p3 0.996 0.741 0 / 0.152);
+        --yellow-a5: color(display-p3 0.996 0.784 0 / 0.202);
+        --yellow-a6: color(display-p3 0.996 0.831 0.141 / 0.257);
+        --yellow-a7: color(display-p3 1 0.871 0.325 / 0.337);
+        --yellow-a8: color(display-p3 1 0.886 0.369 / 0.446);
+        --yellow-a9: color(display-p3 1 0.871 0.294 / 0.975);
+        --yellow-a10: color(display-p3 1 0.882 0.365 / 0.916);
+        --yellow-a11: color(display-p3 1 0.886 0.396 / 0.954);
+        --yellow-a12: color(display-p3 0.996 0.949 0.757 / 0.967);
+
+        --yellow-contrast: #282109;
+        --yellow-surface: color(display-p3 0.133 0.118 0.059 / 0.5);
+        --yellow-indicator: oklch(88.7% 0.182 95.33);
+        --yellow-track: oklch(88.7% 0.182 95.33);
+
+        --gray-1: oklch(17.8% 0.004 277.7);
+        --gray-2: oklch(21.5% 0.004 277.7);
+        --gray-3: oklch(25.5% 0.005 277.7);
+        --gray-4: oklch(28.4% 0.008 277.7);
+        --gray-5: oklch(31.4% 0.009 277.7);
+        --gray-6: oklch(35% 0.01 277.7);
+        --gray-7: oklch(40.2% 0.012 277.7);
+        --gray-8: oklch(49.2% 0.016 277.7);
+        --gray-9: oklch(54% 0.017 277.7);
+        --gray-10: oklch(58.6% 0.016 277.7);
+        --gray-11: oklch(77% 0.014 277.7);
+        --gray-12: oklch(94.9% 0.003 277.7);
+
+        --gray-a1: color(display-p3 0.067 0.067 0.941 / 0.009);
+        --gray-a2: color(display-p3 0.8 0.8 0.98 / 0.043);
+        --gray-a3: color(display-p3 0.851 0.898 0.988 / 0.085);
+        --gray-a4: color(display-p3 0.839 0.871 1 / 0.122);
+        --gray-a5: color(display-p3 0.847 0.875 1 / 0.156);
+        --gray-a6: color(display-p3 0.878 0.898 1 / 0.194);
+        --gray-a7: color(display-p3 0.875 0.906 0.996 / 0.257);
+        --gray-a8: color(display-p3 0.894 0.906 1 / 0.37);
+        --gray-a9: color(display-p3 0.89 0.91 1 / 0.433);
+        --gray-a10: color(display-p3 0.902 0.918 1 / 0.488);
+        --gray-a11: color(display-p3 0.945 0.949 1 / 0.719);
+        --gray-a12: color(display-p3 0.992 0.992 1 / 0.937);
+
+        --gray-contrast: #FFFFFF;
+        --gray-surface: color(display-p3 0 0 0 / 5%);
+        --gray-indicator: oklch(54% 0.017 277.7);
+        --gray-track: oklch(54% 0.017 277.7);
+        }
+    }
+}
+
+body{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    line-height: 1.6;
+    color: var(--gray-contrast);
+    background-color: var(--yellow-1);
+}
+
+.container{
+    width: var(--container-width-lg);
+    margin: 0 auto;
+}
+
+section{
+    padding: 6rem 0;
+}
+
+section h2{
+    text-align: center;
+    margin-bottom: 4 rem;
+}
+
+h1, h2, h3, h4, h5{
+    line-height: 1.2;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.6rem;
+}
+
+h4{
+    font-size: 1.3rem;
+}
+
+a{
+    color: var(--gray-12);
+}
+
+img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.btn{
+    display: inline-block;
+    background: var(--yellow-9);
+    color: var(--gray-1);
+    padding: 0.8rem 1rem;
+    border: 1px solid transparent;
+    font-weight: 500;
+    transition: var(--transition);
+    border-radius: 0.5rem;
+}
+
+.btn:hover{
+    background: var(--yellow-10);
+    color: var(--gray-1);
+}
+
+.btn-primary{
+    background: var(--yellow-9);
+    color: var(--gray-1);
+}
+
+/* Nav Bar */
+nav{
+    background: transparent;
+    width: 100vw;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    z-index: 11;
+}
+
+/* change nav bar styles on scroll using javascript */
+.window-scroll {
+     /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.34);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    
+}
+
+.nav__container{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav button{
+    display: none;
+}
+
+.nav__menu{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.nav__menu a{
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.nav__menu a:hover{
+    color: var(--yellow-10);
+}
+
+/* Footer */
+footer{
+    background: var(--yellow-2);
+    padding-top: 5rem;
+    font-size: 0.8rem;
+}
+
+.footer__container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5rem;
+}
+
+.footer__container > div h4{
+    margin-bottom: 1rem;
+}
+
+.footer__1 p{
+    margin: 0 0 1rem;
+}
+
+footer ul li a:hover{
+    text-decoration: underline;
+}
+
+.footer__1 li a:hover{
+    text-decoration: underline;
+}
+
+.footer__4 a:hover{
+    text-decoration: underline;
+}
+
+.footer__socials{
+    display: flex;
+    gap: 1rem;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+.footer__socials a:hover{
+    color: var(--yellow-9);
+}
+
+.footer__copyright{
+    text-align: center;
+    margin-top: 4rem;
+    padding: 1.2rem 0;
+    border-top: 1px solid var(--yellow-5);
+}
+
+.hidden{
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(20%);
+    transition: all 1s ease;
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+@media(prefers-reduced-motion){
+    .hidden{
+        transition: none;
+    }
+}

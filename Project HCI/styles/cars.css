@@ -1,0 +1,57 @@
+.scrollable-section {
+    padding: 5rem 2rem 2rem 2rem;
+    background-color: var(--yellow-2);
+    color: var(--gray-contrast);
+    text-align: center;
+}
+
+.scrollable-section h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background-color: var(--gray-6);
+    border-radius: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background: var(--gray-4);
+}
+
+.card {
+    background: var(--yellow-3);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 0 0 auto;
+    width: 200px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    font-size: 1rem;
+    color: var(--gray-12);
+}
