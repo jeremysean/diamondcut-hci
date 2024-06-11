@@ -1,0 +1,132 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("../Assets/Showroom/Showroom1.jpg") no-repeat center center/cover;
+}
+
+.wrapper {
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: var(--gray-contrast);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 0.8rem rgba(255, 255, 255, 0.2);
+    padding: 2rem 3rem;
+    border-radius: 0.8rem;
+    box-sizing: border-box;
+}
+
+.wrapper h1 {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 0.6rem;
+}
+
+.wrapper .input-box {
+    width: 100%;
+    margin-bottom: 0.6rem;
+}
+
+.input-box{
+    margin-bottom: 1rem;
+}
+
+.input-box label{
+    font-size: 0.8rem;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 0.9rem;
+    padding: 15px 30px 15px 15px;
+    color: white;
+}
+
+.input-box input::placeholder {
+    color: var(--gray-contrast);
+}
+
+.wrapper .terms {
+    display: flex;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+.terms{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.terms input {
+    accent-color: var(--gray-contrast);
+    margin-right: 3px;
+}
+
+.wrapper .btn {
+    width: 100%;
+    height: 2.5rem;
+    background: var(--gray-contrast);
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+    box-shadow: 0 0 0.8rem rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--yellow-1);
+    font-weight: 500;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .wrapper {
+        width: 320px;
+        padding: 20px 30px;
+    }
+    
+    .wrapper h1 {
+        font-size: 1.6rem;
+    }
+    
+    .input-box{
+        margin-bottom: 4rem;
+    }
+
+    .input-box input {
+        padding: 15px 25px 15px 15px;
+    }
+    
+    .wrapper .btn {
+        height: 2.2rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .wrapper {
+        width: 100%;
+        margin: 10px;
+        padding: 15px 20px;
+        border-radius: 0.8rem;
+    }
+    
+    .wrapper h1 {
+        font-size: 1.5rem;
+    }
+
+    .input-box input {
+        padding: 10px 20px 10px 10px;
+        border-radius: 0.6rem;
+    }
+    
+    .wrapper .btn {
+        height: 2rem;
+        font-size: 0.8rem;
+    }
+}

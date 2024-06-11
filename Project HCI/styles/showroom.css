@@ -155,14 +155,6 @@
 }
 
 @media (max-width: 768px) {
-    .carousel-inner {
-        height: 60vh;
-    }
-
-    .jumbotron {
-        height: 60vh;
-    }
-
     .gallery-item {
         flex: 1 1 calc(50% - 1rem);
         max-width: calc(50% - 1rem);
@@ -171,34 +163,9 @@
     .map p {
         font-size: 0.9rem;
     }
-
-    .nav__menu {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .nav__menu a {
-        font-size: 1rem;
-    }
 }
 
 @media (max-width: 480px) {
-    .carousel-inner {
-        height: 50vh;
-    }
-
-    .jumbotron {
-        height: 50vh;
-    }
-
-    .jumbotron-content h1 {
-        font-size: 1.5rem;
-    }
-
-    .jumbotron-content p {
-        font-size: 1rem;
-    }
-
     .gallery h2 {
         font-size: 1.5rem;
     }
@@ -218,13 +185,5 @@
 
     .map p {
         font-size: 0.8rem;
-    }
-
-    .nav__menu {
-        gap: 0.5rem;
-    }
-
-    .nav__menu a {
-        font-size: 0.9rem;
     }
 }

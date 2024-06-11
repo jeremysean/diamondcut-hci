@@ -1,22 +1,36 @@
-/* Header */
-header{
+/* Jumbotron */
+.jumbotron {
     position: relative;
-    top: 5rem;
-    overflow: hidden;
-    height: 80vh;
-    margin-bottom: 5rem;
-}
-
-.header__container{
-    display: grid;
-    grid-template-columns: 1fr 3fr;
+    width: 100%;
+    height: 100vh;
+    background: url("../Assets/Showroom/Showroom1.jpg") no-repeat center center/cover;
+    display: flex;
     align-items: center;
-    gap: 5rem;
-    height: 100%;
+    justify-content: center;
+    color: white;
+    text-align: center;
 }
 
-.header__left p{
-    margin: 1rem 0 2.4rem;
+.jumbotron-content {
+    z-index: 2;
+    position: relative;
+}
+
+.jumbotron-content h4{
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.jumbotron::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 /* Categories */
@@ -81,12 +95,13 @@ header{
 }
 
 /* Best Car */
-.cars h2{
-    margin-bottom: 4rem;
-}
-
 .cars{
     margin-top: 10rem;
+    text-align: center;
+}
+
+.cars h1{
+    margin-bottom: 4rem;
 }
 
 .cars__container{
@@ -116,37 +131,179 @@ header{
     font-size: 0.9rem;
 }
 
-/* Jumbotron */
-.jumbotron {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background: url("../Assets/Showroom/Showroom1.jpg") no-repeat center center/cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
+.scrollable-section {
+    padding: 5rem 2rem 2rem 2rem;
+    background-color: var(--yellow-2);
+    color: var(--gray-contrast);
     text-align: center;
 }
 
-.jumbotron-content {
-    z-index: 2;
-    position: relative;
+.scrollable-section__new{
+    margin-top: 4rem;
+}
+.scrollable-section h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
-.jumbotron-content h4{
-    font-weight: 300;
-    font-size: 1.2rem;
-    margin-top: 1rem;
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem 0;
 }
 
-.jumbotron::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
+.scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background-color: var(--gray-6);
+    border-radius: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background: var(--gray-4);
+}
+
+.card {
+    background: var(--yellow-3);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 0 0 auto;
+    width: 400px;
+    padding: 1rem;
+    transition: var(--transition);
+    text-align: center;
+}
+
+.card:hover{
+    border: 1px solid var(--yellow-9);
+    background: transparent;
+}
+
+.card img {
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    font-size: 1rem;
+    color: var(--gray-12);
+}
+
+/* Tablet (768px) */
+@media screen and (max-width: 768px) {
+    .header__container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .categories{
+        height: auto;
+    }
+
+    .categories__container{
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .categories__left{
+        margin-right: 0;
+    }
+
+    .category__icon{
+        margin-top: 4px;
+        padding: 0.6rem;
+        display: inline-block;
+    }
+
+    .cars{
+        margin-top: 1rem;
+    }
+
+    .car{
+        margin-top: 0;
+    }
+
+    .cars__container{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .scrollable-section{
+        padding: 3rem 1rem;
+    }
+
+    .card{
+        width: calc(50% - 4rem);
+    }
+}
+
+/* Mobile (480px) */
+@media screen and (max-width: 480px) {
+    .categories__right{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.7rem;
+    }
+
+    .category{
+        padding: 1rem;
+        border-radius: 1rem; 
+    }
+
+    .categories h1{
+        padding-top: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .categories p{
+        font-size: 0.8rem;
+    }
+
+    .category__icon{
+        margin-top: 4px;
+        padding: 0.4rem;
+        display: inline-block;
+    }
+
+    .cars__container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .jumbotron {
+        height: 50vh;
+    }
+
+    .scrollable-section {
+        padding: 2rem 1rem;
+    }
+
+    .scrollable-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .scroll-container {
+        gap: 0.5rem;
+    }
+
+    .card {
+        width: calc(100% - 6rem);
+    }
+
+    .card h4{
+        font-size: 1rem;
+    }
+
+    .card p{
+        font-size: 0.8rem;
+    }
 }

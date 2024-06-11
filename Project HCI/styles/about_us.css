@@ -9,6 +9,7 @@
     justify-content: center;
     color: white;
     text-align: center;
+    padding: 0 0.8rem 0 0.8rem;
 }
 
 .jumbotron-content {
@@ -38,7 +39,7 @@ header{
     position: relative;
     top: 4rem;
     overflow: hidden;
-    height: 80vh;
+    height: 50vh;
     margin-bottom: 10rem;
     margin-top: 2rem;
 }
@@ -50,6 +51,7 @@ header{
     gap: 5rem;
     height: 100%;
 }
+
 .header__left h4{
     font-weight: 500;
     font-size: medium;
@@ -88,4 +90,99 @@ header{
 .history__content h4{
     color: var(--yellow-9);
     margin-bottom: 1rem;
+}
+
+/* Social Media Container */
+.social__container {
+    text-align: center;
+    padding: 5rem 0 5rem 0;
+}
+
+.social__container h2 {
+    color: var(--grey-contrast);
+    margin-bottom: 1rem;
+}
+
+.social__links {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social__links li {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+.social__links a {
+    color: var(--yellow-9);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social__links a:hover {
+    color: var(--yellow-8);
+}
+
+.social__links i {
+    margin-right: 0.5rem;
+}
+
+@media screen and (max-width: 768px){
+    header{
+        margin-bottom: 6rem;
+    }
+
+    .history__content{
+        margin-bottom: 6rem;
+    }
+
+}
+
+@media screen and (max-width: 480px){
+    header{
+        overflow: hidden;
+        height: auto;
+        margin-bottom: 6rem;
+    }
+
+    .header__container{
+        display: block;
+        align-items: center ;
+    }   
+
+    .header__left {
+        gap: 2rem;
+    }
+
+    .header__left h1{
+        padding: 4rem 0 1rem 0;
+    }
+
+    .history__content{
+        display: block;
+        margin-bottom: 5rem;
+    }
+
+    .history__container{
+        padding: 0;
+    }
+
+    .history h1{
+        margin-bottom: 2rem;
+    }
+
+    .history h4{
+        padding: 2rem 0 1rem 0;
+        margin-bottom: 0;
+    }
+
+    .history p{
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+    }
+
+    .social__container {
+        padding: 3rem 0 3rem 0;
+    }
+    
 }

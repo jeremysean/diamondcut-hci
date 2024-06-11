@@ -1,11 +1,27 @@
-.scrollable-section {
+h1{
+    color: var(--yellow-9);
+}
+
+.scrollable-section_1 {
     padding: 5rem 2rem 2rem 2rem;
     background-color: var(--yellow-2);
     color: var(--gray-contrast);
     text-align: center;
 }
 
-.scrollable-section h1 {
+.scrollable-section_2 {
+    padding: 5rem 2rem 2rem 2rem;
+    background-color: var(--yellow-2);
+    color: var(--gray-contrast);
+    text-align: center;
+}
+
+.scrollable-section__new{
+    margin-top: 4rem;
+}
+
+.scrollable-section_1 h1,
+.scrollable-section_2 h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
 }
@@ -35,9 +51,15 @@
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     flex: 0 0 auto;
-    width: 200px;
+    width: 400px;
     padding: 1rem;
+    transition: var(--transition);
     text-align: center;
+}
+
+.card:hover{
+    border: 1px solid var(--yellow-9);
+    background: transparent;
 }
 
 .card img {
@@ -47,11 +69,71 @@
 }
 
 .card h4 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-bottom: 0.5rem;
 }
 
 .card p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--gray-12);
+}
+
+@media screen and (max-width: 768px) {
+    .scrollable-section{
+        padding: 3rem 1rem;
+    }
+
+    .scrollable-section h2{
+        margin-bottom: 1rem;
+    }
+
+    .card{
+        width: calc(50% - 4rem);
+    }
+    
+    .card h4 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .card p {
+        font-size: 1rem;
+        color: var(--gray-12);
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+    .scrollable-section {
+        padding: 2rem 1rem;
+    }
+
+    .scrollable-section_1 h1,
+    .scrollable-section_2 h1 {
+        font-size: 1.5rem;
+    }
+    
+    .scrollable-section_1 h2,
+    .scrollable-section_2 h2{
+        margin-bottom: 1rem;
+    }
+
+    .scrollable-section__new{
+        margin-top: 2.5rem;
+    }
+    .scroll-container {
+        gap: 0.5rem;
+    }
+
+    .card {
+        width: calc(100% - 6rem);
+    }
+
+    .card h4{
+        font-size: 1rem;
+    }
+
+    .card p{
+        font-size: 0.8rem;
+    }
 }
